@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Example</title>
+</head>
+
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png" alt="" id="image" width="300"><br>
+    <button onclick="image()" id="button">Change to HTML</button>
+    <!-- <button onclick="image2()">Change to JS</button> -->
+</body>
+
+<script>
+    function image() {
+        var image = document.getElementById('image')
+        if (image.src.includes("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png")) {
+            image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+            document.getElementById('button').innerText = "change to JS"
+        } else {
+            image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png"
+            document.getElementById('button').innerText = "change to HTML"
+        }
+    }
+</script>
+
+</html>

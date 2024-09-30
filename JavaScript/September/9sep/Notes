@@ -1,0 +1,37 @@
+OBJECT: 
+
+Object in JavaScripts:
+    Object is a Data Structure of JS
+
+Data Structure: 
+        it is a technique store or manage the data 
+
+Object:
+    it is technique to store and manage the data
+    object store the data in a property format(Key value)
+
+How to Create Object in JS: 
+    Using Literal Notation: 
+        var user = {
+                username: "rohan";
+                id : 101;
+
+
+        };
+
+        var info = {
+
+        };
+
+CRUD Operation on Object:
+    Access Property Value (Read)
+    Insert New Property (Create)
+    Update the Data (Update)
+    delet that Object(Delete)
+
+Nested OBject :
+   object inside Object in the file
+
+
+
+

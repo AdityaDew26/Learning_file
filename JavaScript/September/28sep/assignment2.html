@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>List of Brands</h2>
+    <ol>
+        <li id="li1">Apple</li>
+        <li id="li2">Samsung</li>
+        <li id="li3">OnePlus</li>
+        <li id="li4">Motorola</li>
+    </ol>
+    <button onclick="displayFruits()">Show Fruits</button>
+    <button onclick="displayBrands()">Show Brands</button>
+</body>
+
+<script>
+    function displayFruits() {
+        document.querySelector('h2').innerText = "List of Fruits";
+        document.querySelector("#li1").innerText = "Banana";
+        document.querySelector("#li2").innerText = "Apple";
+        document.querySelector("#li3").innerText = "Orange";
+        document.querySelector("#li4").innerText = "Guava";
+    }
+
+    function displayBrands() {
+        document.querySelector('h2').innerText = "List of Brands";
+        document.querySelector("#li1").innerText = "Apple";
+        document.querySelector("#li2").innerText = "Samsung";
+        document.querySelector("#li3").innerText = "OnePlus";
+        document.querySelector("#li4").innerText = "Motorola";
+    }
+</script>
+
+</html>
