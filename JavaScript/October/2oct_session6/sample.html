@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Table DOM Element Assignment</h2>
+    <button onclick="play()">Let's add</button>
+
+    <script>
+        function play() {
+            var tableDOM = document.createElement('table');
+            var headerRowDom = document.createElement('tr');
+
+            var theadDom = document.createElement('thead');
+
+            var thead1Dom = document.createElement('th');
+            var thead2Dom = document.createElement('th');
+            var thead3Dom = document.createElement('th');
+
+            // Setting header text
+            thead1Dom.innerText = 'Name';
+            thead2Dom.innerText = 'Branch';
+            thead3Dom.innerText = 'Section';
+
+            // Appending header cells to the header row
+            headerRowDom.appendChild(thead1Dom);
+            headerRowDom.appendChild(thead2Dom);
+            headerRowDom.appendChild(thead3Dom);
+
+            // Appending header row to the thead
+            theadDom.appendChild(headerRowDom);
+            tableDOM.appendChild(theadDom);
+
+            // Creating table body
+            var tbodyDom = document.createElement('tbody');
+            var dataRowDom = document.createElement('tr');
+
+            var td1Dom = document.createElement('td');
+            var td2Dom = document.createElement('td');
+            var td3Dom = document.createElement('td');
+
+            // Setting data text
+            td1Dom.innerText = 'Aditya';
+            td2Dom.innerText = 'CSE';
+            td3Dom.innerText = '1';
+
+            // Appending data cells to the data row
+            dataRowDom.appendChild(td1Dom);
+            dataRowDom.appendChild(td2Dom);
+            dataRowDom.appendChild(td3Dom);
+
+            // Appending the data row to the tbody
+            tbodyDom.appendChild(dataRowDom);
+            tableDOM.appendChild(tbodyDom);
+
+            // Appending the table to the body
+            document.body.appendChild(tableDOM);
+        }
+    </script>
+</body>
+
+</html>

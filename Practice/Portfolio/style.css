@@ -18,6 +18,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
+    z-index: 4;
 }
 
 .navbar.scrolled {
@@ -155,6 +156,11 @@
     font-style: normal;
 }
 
+
+/* Projects */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 .projects {
     max-width: 100%;
     padding: 20px;
@@ -163,8 +169,117 @@
 
 .projects h1 {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: rgb(10, 168, 231);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
     color: #333;
     margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* animation: fadeIn 1s ease-in; */
+}
+
+
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+/* Cards Container */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* animation: slideIn 1s ease-in-out; */
+}
+
+
+/* @keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+
+/* Card Items */
+
+.card-items {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(45% - 20px);
+    margin: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-items:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Icon Style */
+
+.card-items img {
+    width: 200px;
+    height: 200px;
+}
+
+** .card-items:hover .material-symbols-outlined {
+    color: #0056b3;
+}
+
+
+/* Links */
+
+.card-items p a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.card-items p a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+
+/* CLients */
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.clients {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+
+.clients h2 {
+    text-align: center;
+    font-size: 40px;
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -174,59 +289,141 @@
     text-underline-offset: 5px;
 }
 
-
-/* Cards Container */
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-
-/* Card Items */
-
-.card-items {
-    background-color: #e8f0fe;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    flex: 1 1 calc(45% - 20px);
-    /* Adjusts the card size */
-    margin: 10px;
-    padding: 15px;
+.client-section {
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 50px;
 }
 
-.card-items:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.carousel-item img {
+    max-width: 200px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.062);
+    color: rgba(255, 255, 255, 0.186);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #717171;
 }
 
 
-/* Icons */
+/* contacts */
 
-.card-items i {
-    font-size: 40px;
-    /* Adjust icon size */
-    color: #007BFF;
-    /* Icon color */
-    display: block;
-    margin-bottom: 10px;
+.contacts {
+    width: 100%;
+    height: 600px;
+    background-color: white;
 }
 
-
-/* Links */
-
-.card-items p a {
-    text-decoration: none;
-    color: #007BFF;
-    /* Link color */
-    font-weight: bold;
+.image {
+    width: 50%;
+    height: 500px;
+    float: left;
 }
 
-.card-items p a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-    /* Darker shade on hover */
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.detail {
+    width: 30%;
+    height: 500px;
+    float: left;
+    text-align: center;
+}
+
+.detai .detail input {
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(222, 212, 212, 0.737);
+}
+
+.detail textarea {
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(222, 216, 216, 0.737);
+}
+
+.detail button {
+    width: 60%;
+    margin: 10px;
+    padding: 7px;
+    border: none;
+    background-color: orange;
+}
+
+.detail button:hover {
+    background-color: rgb(125, 56, 9);
+    color: white;
+    transition: all 1s ease-in-out;
 }

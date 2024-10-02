@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Table DOM Element Assignment</h2>
+    <button onclick="play()">lets add </button>
+
+    <script>
+        function play() {
+            var tableDOM = document.createElement('table')
+            var headerRowDom = document.createElement('tr')
+
+            var theadDom = document.createElement('thead')
+
+            var thead1Dom = document.createElement('th')
+            var thead2Dom = document.createElement('th')
+            var thead3Dom = document.createElement('th')
+
+            thead1Dom.innerText = 'name'
+            thead2Dom.innerText = 'branch'
+            thead3Dom.innerText = 'section'
+
+            headerRowDom.appendChild(thead1Dom)
+            headerRowDom.appendChild(thead2Dom)
+            headerRowDom.appendChild(thead3Dom)
+
+            theadDom.appendChild(headerRowDom);
+            tableDOM.appendChild(theadDom);
+
+            var tbodyDom = document.createElement('tbody');
+            var dataRowDom = document.createElement('tr')
+
+            var td1Dom = document.createElement('td')
+            var td2Dom = document.createElement('td')
+            var td3Dom = document.createElement('td')
+
+
+
+            td1Dom.innerText = 'aditya'
+            td2Dom.innerText = 'CSE'
+            td3Dom.innerText = '1'
+
+
+
+            dataRowDom.appendChild(td3Dom)
+            dataRowDom.appendChild(td1Dom)
+            dataRowDom.appendChild(td2Dom)
+
+
+            tbodyDom.appendChild(dataRowDom);
+            tableDOM.appendChild(tbodyDom);
+
+
+
+            var body = document.querySelector('body').appendChild(tableDOM)
+
+
+
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

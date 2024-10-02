@@ -1,0 +1,117 @@
+<!-- Form -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    .box {
+        width: 40%;
+        height: 500px;
+        background-color: bisque;
+        text-align: center;
+        margin: 100px 450px;
+        box-shadow: 4px 4px 6px black;
+        border-radius: 30px;
+    }
+    
+    input {
+        margin: 10px;
+        text-align: center;
+        padding: 5px 100px;
+    }
+    
+    h2 {
+        padding: 20px;
+        font-size: 40px;
+    }
+    
+    button {
+        padding: 4px 20px;
+        margin-bottom: 20px;
+        border: none;
+        background-color: chocolate;
+    }
+    
+    button:hover {
+        background-color: brown;
+        color: white;
+        transition: all 1s ease;
+    }
+    
+    input:hover {
+        padding: 10px 100px;
+        transition: all 1s ease-in;
+        transition-delay: 7s;
+    }
+</style>
+
+<body>
+    <div class="box" id="box">
+        <h2 id="h2">Simple Form</h2>
+        <form action="" id="form">
+            <input type="text" placeholder="name" id="name"><br>
+            <input type="email" name="" id="email" placeholder="Email"><br>
+            <input type="password" name="" id="password" placeholder="password"><br>
+            <input type="checkbox" onclick="DarkMode()" id="checkbox"> switch to dark mode <br>
+            <button type="button" onclick="change()">Submit</button>
+        </form>
+
+        <table width=" 100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+
+            <tr>
+                <td id="col1"></td>
+                <td id="col2"></td>
+                <td id="col3"></td>
+            </tr>
+        </table>
+
+
+    </div>
+    <script>
+        function change() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+
+            var n1 = document.getElementById('col1').innerHTML = name
+            var e1 = document.getElementById('col2').innerHTML = email
+            var p1 = document.getElementById('col3').innerHTML = password
+
+
+        }
+
+
+        function DarkMode() {
+            var checkbox = document.getElementById('checkbox')
+            var box = document.getElementById('box')
+            var inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]')
+            if (checkbox.checked) {
+                box.style.backgroundColor = "black";
+                box.style.color = "white";
+                box.style.boxShadow = "8px 8px 16px violet";
+                inputs.forEach(input => input.style.color = "white")
+
+            } else {
+                box.style.backgroundColor = "bisque";
+                box.style.color = "black";
+                box.style.boxShadow = "4px 4px 6px black";
+                inputs.forEach(input => input.style.color = "black")
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

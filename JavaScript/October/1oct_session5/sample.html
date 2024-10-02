@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>h3dom</h2>
+    <button onclick="fn()">Call</button>
+</body>
+
+<script>
+    function fn() {
+        var h2dom = document.querySelector('h2');
+
+        // Loop through properties of the DOM element
+        for (let key in h2dom) {
+            console.log(`${key}: ${h2dom[key]}`);
+        }
+    }
+</script>
+
+</html>

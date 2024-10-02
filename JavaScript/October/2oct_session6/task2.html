@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>ol insert</h2>
+    <button onclick="list()">add element</button>
+
+    <script>
+        function list() {
+            var ol = document.createElement('ol')
+            var li = document.createElement('li')
+            var li1 = document.createElement('li')
+
+            li.innerText = 'apple'
+            li1.innerText = 'orange'
+
+            ol.appendChild(li)
+            ol.appendChild(li1)
+
+            var bodyDom = document.querySelector('body').appendChild(ol)
+        }
+    </script>
+</body>
+
+</html>

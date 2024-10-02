@@ -10,7 +10,7 @@
 <body>
     <section>
         <h1 id="font">JS is super Easy</h1>
-        <p>select the height:</p>
+        <p>select the height and font decoration:</p>
         <select name="" id="select" onchange="change()">
             <option value="select">select</option>
             <option value="10px">10</option>
@@ -22,6 +22,14 @@
 <option value="36px">36</option>
 <option value="72px">72</option>
         </select>
+
+        <select name="" id="transform" class="" onchange="Design()">
+        <option value="select">select</option>
+        <option value="dotted">dotted</option>
+        <option value="dashed">dashed</option>
+        <option value="UnderLine">UnderLine</option>
+        <option value="Line-through">LineThrough</option>
+    </select>
     </section>
 </body>
 <script>
@@ -31,10 +39,14 @@
         if (option !== "select") {
             fontSize.style.fontSize = option;
         }
+    }
 
-
-
-
+    const Design = () => {
+        var opt = document.getElementById('transform').value;
+        var transform = document.getElementById('font');
+        if (opt !== "select") {
+            transform.style.textDecoration = opt;
+        }
     }
 </script>
 
